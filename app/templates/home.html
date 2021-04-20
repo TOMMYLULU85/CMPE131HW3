@@ -4,17 +4,17 @@
     <h1>Send messages</h1>
     {% for post in posts %}
     <div>
-        <p> {{ post.author }} : {{ post.message}} </p>
+        <p> <b>{{ post.author }} : {{ post.message}} </b></p>
     </div>
     {% endfor %}
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
-            {{ form.author.label }}<br>
+           <b>{{ form.author.label }}</b><br>
             {{ form.author(size=32) }}
         </p>
         <p>
-            {{ form.message.label }}<br>
+           <b>{{ form.message.label }}</b><br>
             {{ form.message(size=128) }}
         </p>
         <p>{{ form.submit() }}</p>
